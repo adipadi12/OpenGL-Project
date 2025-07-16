@@ -72,6 +72,8 @@ CMakeFiles/MyOGPropject.dir/src/glad.c.o: /home/adi/Dev/OpenGL-Project/src/glad.
 
 CMakeFiles/MyOGPropject.dir/src/main.cpp.o: /home/adi/Dev/OpenGL-Project/src/main.cpp \
   /home/adi/Dev/OpenGL-Project/src/glad.h \
+  /usr/include/GL/gl.h \
+  /usr/include/GL/glext.h \
   /usr/include/GLFW/glfw3.h \
   /usr/include/KHR/khrplatform.h \
   /usr/include/alloca.h \
@@ -363,10 +365,6 @@ CMakeFiles/MyOGPropject.dir/src/main.cpp.o: /home/adi/Dev/OpenGL-Project/src/mai
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
-/usr/include/c++/13/cstddef:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
-
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
@@ -447,6 +445,12 @@ CMakeFiles/MyOGPropject.dir/src/main.cpp.o: /home/adi/Dev/OpenGL-Project/src/mai
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
+/usr/include/c++/13/cstddef:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+
+/usr/include/GL/glext.h:
+
 /usr/include/c++/13/ostream:
 
 /usr/include/c++/13/bits/streambuf_iterator.h:
@@ -494,10 +498,6 @@ CMakeFiles/MyOGPropject.dir/src/main.cpp.o: /home/adi/Dev/OpenGL-Project/src/mai
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
 /usr/include/strings.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
-
-/usr/include/c++/13/bits/basic_ios.tcc:
 
 /usr/include/c++/13/bits/nested_exception.h:
 
@@ -552,6 +552,12 @@ CMakeFiles/MyOGPropject.dir/src/main.cpp.o: /home/adi/Dev/OpenGL-Project/src/mai
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h:
 
 /home/adi/Dev/OpenGL-Project/src/main.cpp:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
+
+/usr/include/c++/13/bits/basic_ios.tcc:
+
+/usr/include/GL/gl.h:
 
 /usr/include/asm-generic/errno-base.h:
 
@@ -627,9 +633,9 @@ CMakeFiles/MyOGPropject.dir/src/main.cpp.o: /home/adi/Dev/OpenGL-Project/src/mai
 
 /usr/include/c++/13/bits/ostream_insert.h:
 
-/usr/include/c++/13/bits/std_abs.h:
-
 /usr/include/c++/13/bits/uses_allocator.h:
+
+/usr/include/c++/13/bits/std_abs.h:
 
 /usr/include/c++/13/bits/postypes.h:
 

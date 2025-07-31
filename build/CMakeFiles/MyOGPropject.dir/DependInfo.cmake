@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/adi/Dev/OpenGL-Project/src/glad.c" "CMakeFiles/MyOGPropject.dir/src/glad.c.o" "gcc" "CMakeFiles/MyOGPropject.dir/src/glad.c.o.d"
-  "/home/adi/Dev/OpenGL-Project/src/main.cpp" "CMakeFiles/MyOGPropject.dir/src/main.cpp.o" "gcc" "CMakeFiles/MyOGPropject.dir/src/main.cpp.o.d"
+  "/media/adi/9219-F2AA/OpenGlGit/OpenGL-Project/src/glad.c" "CMakeFiles/MyOGPropject.dir/src/glad.c.o" "gcc" "CMakeFiles/MyOGPropject.dir/src/glad.c.o.d"
+  "/media/adi/9219-F2AA/OpenGlGit/OpenGL-Project/src/main.cpp" "CMakeFiles/MyOGPropject.dir/src/main.cpp.o" "gcc" "CMakeFiles/MyOGPropject.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

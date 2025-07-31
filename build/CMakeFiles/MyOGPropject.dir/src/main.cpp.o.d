@@ -1,6 +1,8 @@
 CMakeFiles/MyOGPropject.dir/src/main.cpp.o: \
- /home/adi/Dev/OpenGL-Project/src/main.cpp /usr/include/stdc-predef.h \
- /home/adi/Dev/OpenGL-Project/src/glad.h /usr/include/KHR/khrplatform.h \
+ /media/adi/9219-F2AA/OpenGlGit/OpenGL-Project/src/main.cpp \
+ /usr/include/stdc-predef.h \
+ /media/adi/9219-F2AA/OpenGlGit/OpenGL-Project/src/glad.h \
+ /usr/include/KHR/khrplatform.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

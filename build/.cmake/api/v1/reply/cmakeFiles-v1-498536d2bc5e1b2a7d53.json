@@ -783,8 +783,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/adi/Dev/OpenGL-Project/build",
-		"source" : "/home/adi/Dev/OpenGL-Project"
+		"build" : "/media/adi/9219-F2AA/OpenGlGit/OpenGL-Project/build",
+		"source" : "/media/adi/9219-F2AA/OpenGlGit/OpenGL-Project"
 	},
 	"version" : 
 	{

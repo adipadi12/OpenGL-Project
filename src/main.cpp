@@ -6,6 +6,13 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processsInput(GLFWwindow *window);
 
 int main(){
+    float vertices[] = {
+        // positions          // colors
+        -0.5f, -0.5f, 0.0f,
+        0.5f, -0.5f, 0.0f,
+        0.0f,  0.5f, 0.0f    
+    };
+
     glfwInit(); //initialize GLFW
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3); //configured

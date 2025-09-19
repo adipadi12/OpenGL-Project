@@ -3,23 +3,27 @@
 
 using namespace std;
 
-void largestElem(vector<int> arr, int n){
+void leftRotateOnePlace(vector<int> arr, int n){
 
     if(n<=0){
         cout<<"Array is empty";
         return;
     }
 
-    int largest = arr[0];
-
-    for(int i = 0; i<n; i++){
-        if(arr[i]>largest){
-            largest = arr[i];
-        }
+    int temp = arr[0];
+    // 1,2,34,5,65
+    //2,34,5,65,1
+    for(int i = 1; i<n; i++){
+        arr[i - 1] = arr[i];
     }
-    cout<<"The largest element in the array is: "<<largest;
-
+    arr[n - 1] = temp;
+    
+    cout<<"The elementa in the rotated array are: ";
+    for(int i=0; i<n; i++){
+        cout<<arr[i]<<endl;
+    }
 }
+
 int main(){
     int x;
     cout << "Enter size of array: ";
@@ -29,6 +33,6 @@ int main(){
     for(int i=0; i<x; i++){
         cin>>arr[i];
     }
-    largestElem(arr, x);
+    leftRotateOnePlace(arr, x);
     return 0;
 }

@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/adi/CustomRenderer/OpenGL-Project/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/MyOGPropject.dir/src/main.cpp.o -c /home/adi/CustomRenderer/OpenGL-Project/src/main.cpp",
+  "file": "/home/adi/CustomRenderer/OpenGL-Project/src/main.cpp",
+  "output": "CMakeFiles/MyOGPropject.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/adi/CustomRenderer/OpenGL-Project/build",
+  "command": "/usr/bin/gcc   -g -o CMakeFiles/MyOGPropject.dir/src/glad.c.o -c /home/adi/CustomRenderer/OpenGL-Project/src/glad.c",
+  "file": "/home/adi/CustomRenderer/OpenGL-Project/src/glad.c",
+  "output": "CMakeFiles/MyOGPropject.dir/src/glad.c.o"
+}
+]

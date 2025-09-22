@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/adi/9219-F2AA/OpenGlGit/OpenGL-Project
+CMAKE_SOURCE_DIR = /home/adi/CustomRenderer/OpenGL-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/adi/9219-F2AA/OpenGlGit/OpenGL-Project/build
+CMAKE_BINARY_DIR = /home/adi/CustomRenderer/OpenGL-Project/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/MyOGPropject.dir/depend.make
@@ -70,32 +70,32 @@ include CMakeFiles/MyOGPropject.dir/progress.make
 include CMakeFiles/MyOGPropject.dir/flags.make
 
 CMakeFiles/MyOGPropject.dir/src/main.cpp.o: CMakeFiles/MyOGPropject.dir/flags.make
-CMakeFiles/MyOGPropject.dir/src/main.cpp.o: /media/adi/9219-F2AA/OpenGlGit/OpenGL-Project/src/main.cpp
+CMakeFiles/MyOGPropject.dir/src/main.cpp.o: /home/adi/CustomRenderer/OpenGL-Project/src/main.cpp
 CMakeFiles/MyOGPropject.dir/src/main.cpp.o: CMakeFiles/MyOGPropject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/adi/9219-F2AA/OpenGlGit/OpenGL-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MyOGPropject.dir/src/main.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyOGPropject.dir/src/main.cpp.o -MF CMakeFiles/MyOGPropject.dir/src/main.cpp.o.d -o CMakeFiles/MyOGPropject.dir/src/main.cpp.o -c /media/adi/9219-F2AA/OpenGlGit/OpenGL-Project/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adi/CustomRenderer/OpenGL-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MyOGPropject.dir/src/main.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyOGPropject.dir/src/main.cpp.o -MF CMakeFiles/MyOGPropject.dir/src/main.cpp.o.d -o CMakeFiles/MyOGPropject.dir/src/main.cpp.o -c /home/adi/CustomRenderer/OpenGL-Project/src/main.cpp
 
 CMakeFiles/MyOGPropject.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyOGPropject.dir/src/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/adi/9219-F2AA/OpenGlGit/OpenGL-Project/src/main.cpp > CMakeFiles/MyOGPropject.dir/src/main.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adi/CustomRenderer/OpenGL-Project/src/main.cpp > CMakeFiles/MyOGPropject.dir/src/main.cpp.i
 
 CMakeFiles/MyOGPropject.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyOGPropject.dir/src/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/adi/9219-F2AA/OpenGlGit/OpenGL-Project/src/main.cpp -o CMakeFiles/MyOGPropject.dir/src/main.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adi/CustomRenderer/OpenGL-Project/src/main.cpp -o CMakeFiles/MyOGPropject.dir/src/main.cpp.s
 
 CMakeFiles/MyOGPropject.dir/src/glad.c.o: CMakeFiles/MyOGPropject.dir/flags.make
-CMakeFiles/MyOGPropject.dir/src/glad.c.o: /media/adi/9219-F2AA/OpenGlGit/OpenGL-Project/src/glad.c
+CMakeFiles/MyOGPropject.dir/src/glad.c.o: /home/adi/CustomRenderer/OpenGL-Project/src/glad.c
 CMakeFiles/MyOGPropject.dir/src/glad.c.o: CMakeFiles/MyOGPropject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/adi/9219-F2AA/OpenGlGit/OpenGL-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/MyOGPropject.dir/src/glad.c.o"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyOGPropject.dir/src/glad.c.o -MF CMakeFiles/MyOGPropject.dir/src/glad.c.o.d -o CMakeFiles/MyOGPropject.dir/src/glad.c.o -c /media/adi/9219-F2AA/OpenGlGit/OpenGL-Project/src/glad.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adi/CustomRenderer/OpenGL-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/MyOGPropject.dir/src/glad.c.o"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyOGPropject.dir/src/glad.c.o -MF CMakeFiles/MyOGPropject.dir/src/glad.c.o.d -o CMakeFiles/MyOGPropject.dir/src/glad.c.o -c /home/adi/CustomRenderer/OpenGL-Project/src/glad.c
 
 CMakeFiles/MyOGPropject.dir/src/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/MyOGPropject.dir/src/glad.c.i"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /media/adi/9219-F2AA/OpenGlGit/OpenGL-Project/src/glad.c > CMakeFiles/MyOGPropject.dir/src/glad.c.i
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/adi/CustomRenderer/OpenGL-Project/src/glad.c > CMakeFiles/MyOGPropject.dir/src/glad.c.i
 
 CMakeFiles/MyOGPropject.dir/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/MyOGPropject.dir/src/glad.c.s"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /media/adi/9219-F2AA/OpenGlGit/OpenGL-Project/src/glad.c -o CMakeFiles/MyOGPropject.dir/src/glad.c.s
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/adi/CustomRenderer/OpenGL-Project/src/glad.c -o CMakeFiles/MyOGPropject.dir/src/glad.c.s
 
 # Object files for target MyOGPropject
 MyOGPropject_OBJECTS = \
@@ -111,7 +111,7 @@ MyOGPropject: CMakeFiles/MyOGPropject.dir/build.make
 MyOGPropject: /usr/lib/x86_64-linux-gnu/libGLX.so
 MyOGPropject: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 MyOGPropject: CMakeFiles/MyOGPropject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/media/adi/9219-F2AA/OpenGlGit/OpenGL-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable MyOGPropject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/adi/CustomRenderer/OpenGL-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable MyOGPropject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MyOGPropject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -123,6 +123,6 @@ CMakeFiles/MyOGPropject.dir/clean:
 .PHONY : CMakeFiles/MyOGPropject.dir/clean
 
 CMakeFiles/MyOGPropject.dir/depend:
-	cd /media/adi/9219-F2AA/OpenGlGit/OpenGL-Project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /media/adi/9219-F2AA/OpenGlGit/OpenGL-Project /media/adi/9219-F2AA/OpenGlGit/OpenGL-Project /media/adi/9219-F2AA/OpenGlGit/OpenGL-Project/build /media/adi/9219-F2AA/OpenGlGit/OpenGL-Project/build /media/adi/9219-F2AA/OpenGlGit/OpenGL-Project/build/CMakeFiles/MyOGPropject.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/adi/CustomRenderer/OpenGL-Project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adi/CustomRenderer/OpenGL-Project /home/adi/CustomRenderer/OpenGL-Project /home/adi/CustomRenderer/OpenGL-Project/build /home/adi/CustomRenderer/OpenGL-Project/build /home/adi/CustomRenderer/OpenGL-Project/build/CMakeFiles/MyOGPropject.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/MyOGPropject.dir/depend
 

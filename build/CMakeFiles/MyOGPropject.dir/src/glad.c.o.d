@@ -1,5 +1,5 @@
 CMakeFiles/MyOGPropject.dir/src/glad.c.o: \
- /media/adi/9219-F2AA/OpenGlGit/OpenGL-Project/src/glad.c \
+ /home/adi/CustomRenderer/OpenGL-Project/src/glad.c \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -52,7 +52,7 @@ CMakeFiles/MyOGPropject.dir/src/glad.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/strings.h \
- /media/adi/9219-F2AA/OpenGlGit/OpenGL-Project/src/glad.h \
+ /home/adi/CustomRenderer/OpenGL-Project/src/glad.h \
  /usr/include/KHR/khrplatform.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \

@@ -6,8 +6,8 @@
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processsInput(GLFWwindow *window);
 
-const int SCREEN_WIDTH = 800;
-const int SCREEN_HEIGHT = 600;
+const int SCREEN_WIDTH = 1000;
+const int SCREEN_HEIGHT = 800;
 // vertex shader source code
 const char *vertexShaderSource = "#version 330 core\n"
     "layout (location = 0) in vec3 aPos;\n"
@@ -35,15 +35,6 @@ int main(){
     // using CORE profile
     // only modern functions are available
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-
-    // can use normal floats but safer to use GLfloats
-    GLfloat vertices[] = 
-    {
-        // coordinates for equilateral triangle
-        -1.0f, -1.0f, 0.0f, //bottom left
-         1.0f, -1.0f, 0.0f, //bottom right
-         0.0f,  1.0f, 0.0f  //top
-    };
 
     // create a GLFW window object of 800 by 600 pixels
     GLFWwindow* window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "AdiPadi Engine", NULL, NULL);
@@ -82,13 +73,31 @@ int main(){
     glDeleteShader(vertexShader);
     glDeleteShader(fragmentShader);
 
+
+    // can use normal floats but safer to use GLfloats
+    GLfloat vertices[] = {
+        -0.5f, -0.5f, 0.0f, // 0 bottom left
+        0.5f, -0.5f, 0.0f, // 1 bottom right
+        0.0f,  0.5f, 0.0f, // 2 top
+        -0.25f, 0.0f, 0.0f, // 3 inner left
+        0.25f, 0.0f, 0.0f, // 4 inner right
+        0.0f, -0.5f, 0.0f // 5 inner bottom
+    };
+
+    GLuint indices[] = {
+        0, 3, 5, // lower left triangle
+        3, 2, 4, // upper triangle
+        5, 4, 1 // lower right triangle
+    };
+
+
     // big batches of vertices sent from CPU to GPU
-    GLuint VAO, VBO; //vertex buffer object, vertex array object
+    GLuint VAO, VBO, EBO; //vertex buffer object, vertex array object
 
     //always generate VAO before VBO
     glGenVertexArrays(1, &VAO); //generate 1 vertex array object
-
     glGenBuffers(1, &VBO); //generate 1 buffer for 1 3D object
+    glGenBuffers(1, &EBO); //generate 1 element buffer object
 
     // bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
     glBindVertexArray(VAO); 
@@ -100,12 +109,15 @@ int main(){
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW); // STATIC DRAW means the data is set only once and used many times
     // specified to improve performance`
 
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO); //bind the element buffer object
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW); //copy the indices data into the buffer's memory
+
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0); //enable the vertex attribute at location 0
 
     glBindBuffer(GL_ARRAY_BUFFER, 0); //unbind the VBO
     glBindVertexArray(0); //unbind the VAO
-
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0); //unbind the EBO after VAO because the EBO is stored in the VAO
 
     //set clear color
     glClearColor(0.2f, 0.3f, 0.3f, 1.0f); 
@@ -122,8 +134,7 @@ int main(){
         glClear(GL_COLOR_BUFFER_BIT);
         glUseProgram(shaderProgram); //use the shader program object
         glBindVertexArray(VAO); //bind the VAO (the triangle)
-        glDrawArrays(GL_TRIANGLES, 0, 3); //draw the triangle using the 3 vertices in the VAO
-        glBindVertexArray(0); //unbind the VAO
+        glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_INT, 0); //draw the triangle using the 3 vertices in the VAO
         glfwSwapBuffers(window);  //ensures image is swapped each frame
 
         //checks for any events like keyboard input or mouse movement
@@ -133,6 +144,7 @@ int main(){
     // de-allocate all resources once they've outlived their purpose:
     glDeleteVertexArrays(1, &VAO); //delete the vertex array object
     glDeleteBuffers(1, &VBO); //delete the vertex buffer object
+    glDeleteBuffers(1, &EBO); //delete the element buffer object
     glDeleteProgram(shaderProgram); //delete the shader program
 
     // delete window before ending the program

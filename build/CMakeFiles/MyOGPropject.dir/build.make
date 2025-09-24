@@ -97,21 +97,85 @@ CMakeFiles/MyOGPropject.dir/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/MyOGPropject.dir/src/glad.c.s"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/adi/CustomRenderer/OpenGL-Project/src/glad.c -o CMakeFiles/MyOGPropject.dir/src/glad.c.s
 
+CMakeFiles/MyOGPropject.dir/src/EBO.cpp.o: CMakeFiles/MyOGPropject.dir/flags.make
+CMakeFiles/MyOGPropject.dir/src/EBO.cpp.o: /home/adi/CustomRenderer/OpenGL-Project/src/EBO.cpp
+CMakeFiles/MyOGPropject.dir/src/EBO.cpp.o: CMakeFiles/MyOGPropject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adi/CustomRenderer/OpenGL-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MyOGPropject.dir/src/EBO.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyOGPropject.dir/src/EBO.cpp.o -MF CMakeFiles/MyOGPropject.dir/src/EBO.cpp.o.d -o CMakeFiles/MyOGPropject.dir/src/EBO.cpp.o -c /home/adi/CustomRenderer/OpenGL-Project/src/EBO.cpp
+
+CMakeFiles/MyOGPropject.dir/src/EBO.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyOGPropject.dir/src/EBO.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adi/CustomRenderer/OpenGL-Project/src/EBO.cpp > CMakeFiles/MyOGPropject.dir/src/EBO.cpp.i
+
+CMakeFiles/MyOGPropject.dir/src/EBO.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyOGPropject.dir/src/EBO.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adi/CustomRenderer/OpenGL-Project/src/EBO.cpp -o CMakeFiles/MyOGPropject.dir/src/EBO.cpp.s
+
+CMakeFiles/MyOGPropject.dir/src/VAO.cpp.o: CMakeFiles/MyOGPropject.dir/flags.make
+CMakeFiles/MyOGPropject.dir/src/VAO.cpp.o: /home/adi/CustomRenderer/OpenGL-Project/src/VAO.cpp
+CMakeFiles/MyOGPropject.dir/src/VAO.cpp.o: CMakeFiles/MyOGPropject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adi/CustomRenderer/OpenGL-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MyOGPropject.dir/src/VAO.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyOGPropject.dir/src/VAO.cpp.o -MF CMakeFiles/MyOGPropject.dir/src/VAO.cpp.o.d -o CMakeFiles/MyOGPropject.dir/src/VAO.cpp.o -c /home/adi/CustomRenderer/OpenGL-Project/src/VAO.cpp
+
+CMakeFiles/MyOGPropject.dir/src/VAO.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyOGPropject.dir/src/VAO.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adi/CustomRenderer/OpenGL-Project/src/VAO.cpp > CMakeFiles/MyOGPropject.dir/src/VAO.cpp.i
+
+CMakeFiles/MyOGPropject.dir/src/VAO.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyOGPropject.dir/src/VAO.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adi/CustomRenderer/OpenGL-Project/src/VAO.cpp -o CMakeFiles/MyOGPropject.dir/src/VAO.cpp.s
+
+CMakeFiles/MyOGPropject.dir/src/VBO.cpp.o: CMakeFiles/MyOGPropject.dir/flags.make
+CMakeFiles/MyOGPropject.dir/src/VBO.cpp.o: /home/adi/CustomRenderer/OpenGL-Project/src/VBO.cpp
+CMakeFiles/MyOGPropject.dir/src/VBO.cpp.o: CMakeFiles/MyOGPropject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adi/CustomRenderer/OpenGL-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MyOGPropject.dir/src/VBO.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyOGPropject.dir/src/VBO.cpp.o -MF CMakeFiles/MyOGPropject.dir/src/VBO.cpp.o.d -o CMakeFiles/MyOGPropject.dir/src/VBO.cpp.o -c /home/adi/CustomRenderer/OpenGL-Project/src/VBO.cpp
+
+CMakeFiles/MyOGPropject.dir/src/VBO.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyOGPropject.dir/src/VBO.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adi/CustomRenderer/OpenGL-Project/src/VBO.cpp > CMakeFiles/MyOGPropject.dir/src/VBO.cpp.i
+
+CMakeFiles/MyOGPropject.dir/src/VBO.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyOGPropject.dir/src/VBO.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adi/CustomRenderer/OpenGL-Project/src/VBO.cpp -o CMakeFiles/MyOGPropject.dir/src/VBO.cpp.s
+
+CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.o: CMakeFiles/MyOGPropject.dir/flags.make
+CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.o: /home/adi/CustomRenderer/OpenGL-Project/src/shaderClass.cpp
+CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.o: CMakeFiles/MyOGPropject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adi/CustomRenderer/OpenGL-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.o -MF CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.o.d -o CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.o -c /home/adi/CustomRenderer/OpenGL-Project/src/shaderClass.cpp
+
+CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adi/CustomRenderer/OpenGL-Project/src/shaderClass.cpp > CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.i
+
+CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adi/CustomRenderer/OpenGL-Project/src/shaderClass.cpp -o CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.s
+
 # Object files for target MyOGPropject
 MyOGPropject_OBJECTS = \
 "CMakeFiles/MyOGPropject.dir/src/main.cpp.o" \
-"CMakeFiles/MyOGPropject.dir/src/glad.c.o"
+"CMakeFiles/MyOGPropject.dir/src/glad.c.o" \
+"CMakeFiles/MyOGPropject.dir/src/EBO.cpp.o" \
+"CMakeFiles/MyOGPropject.dir/src/VAO.cpp.o" \
+"CMakeFiles/MyOGPropject.dir/src/VBO.cpp.o" \
+"CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.o"
 
 # External object files for target MyOGPropject
 MyOGPropject_EXTERNAL_OBJECTS =
 
 MyOGPropject: CMakeFiles/MyOGPropject.dir/src/main.cpp.o
 MyOGPropject: CMakeFiles/MyOGPropject.dir/src/glad.c.o
+MyOGPropject: CMakeFiles/MyOGPropject.dir/src/EBO.cpp.o
+MyOGPropject: CMakeFiles/MyOGPropject.dir/src/VAO.cpp.o
+MyOGPropject: CMakeFiles/MyOGPropject.dir/src/VBO.cpp.o
+MyOGPropject: CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.o
 MyOGPropject: CMakeFiles/MyOGPropject.dir/build.make
 MyOGPropject: /usr/lib/x86_64-linux-gnu/libGLX.so
 MyOGPropject: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 MyOGPropject: CMakeFiles/MyOGPropject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/adi/CustomRenderer/OpenGL-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable MyOGPropject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/adi/CustomRenderer/OpenGL-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable MyOGPropject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MyOGPropject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

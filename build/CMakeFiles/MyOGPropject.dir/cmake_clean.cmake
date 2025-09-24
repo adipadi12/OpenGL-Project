@@ -1,8 +1,16 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/MyOGPropject.dir/src/EBO.cpp.o"
+  "CMakeFiles/MyOGPropject.dir/src/EBO.cpp.o.d"
+  "CMakeFiles/MyOGPropject.dir/src/VAO.cpp.o"
+  "CMakeFiles/MyOGPropject.dir/src/VAO.cpp.o.d"
+  "CMakeFiles/MyOGPropject.dir/src/VBO.cpp.o"
+  "CMakeFiles/MyOGPropject.dir/src/VBO.cpp.o.d"
   "CMakeFiles/MyOGPropject.dir/src/glad.c.o"
   "CMakeFiles/MyOGPropject.dir/src/glad.c.o.d"
   "CMakeFiles/MyOGPropject.dir/src/main.cpp.o"
   "CMakeFiles/MyOGPropject.dir/src/main.cpp.o.d"
+  "CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.o"
+  "CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.o.d"
   "MyOGPropject"
   "MyOGPropject.pdb"
 )

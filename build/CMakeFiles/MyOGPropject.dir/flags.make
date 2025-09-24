@@ -3,15 +3,15 @@
 
 # compile C with /usr/bin/gcc
 # compile CXX with /usr/bin/g++
-C_DEFINES = 
+C_DEFINES = -DSHADER_DIR=\"/home/adi/CustomRenderer/OpenGL-Project/src/Shaders/\"
 
-C_INCLUDES = 
+C_INCLUDES = -I/home/adi/CustomRenderer/OpenGL-Project/src/HeaderFiles -I/home/adi/CustomRenderer/OpenGL-Project/src/Shaders -I/home/adi/CustomRenderer/OpenGL-Project/src
 
 C_FLAGS = -g
 
-CXX_DEFINES = 
+CXX_DEFINES = -DSHADER_DIR=\"/home/adi/CustomRenderer/OpenGL-Project/src/Shaders/\"
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/adi/CustomRenderer/OpenGL-Project/src/HeaderFiles -I/home/adi/CustomRenderer/OpenGL-Project/src/Shaders -I/home/adi/CustomRenderer/OpenGL-Project/src
 
 CXX_FLAGS = -g
 

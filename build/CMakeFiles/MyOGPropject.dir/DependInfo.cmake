@@ -9,7 +9,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/adi/CustomRenderer/OpenGL-Project/src/glad.c" "CMakeFiles/MyOGPropject.dir/src/glad.c.o" "gcc" "CMakeFiles/MyOGPropject.dir/src/glad.c.o.d"
+  "/home/adi/CustomRenderer/OpenGL-Project/src/EBO.cpp" "CMakeFiles/MyOGPropject.dir/src/EBO.cpp.o" "gcc" "CMakeFiles/MyOGPropject.dir/src/EBO.cpp.o.d"
+  "/home/adi/CustomRenderer/OpenGL-Project/src/VAO.cpp" "CMakeFiles/MyOGPropject.dir/src/VAO.cpp.o" "gcc" "CMakeFiles/MyOGPropject.dir/src/VAO.cpp.o.d"
+  "/home/adi/CustomRenderer/OpenGL-Project/src/VBO.cpp" "CMakeFiles/MyOGPropject.dir/src/VBO.cpp.o" "gcc" "CMakeFiles/MyOGPropject.dir/src/VBO.cpp.o.d"
   "/home/adi/CustomRenderer/OpenGL-Project/src/main.cpp" "CMakeFiles/MyOGPropject.dir/src/main.cpp.o" "gcc" "CMakeFiles/MyOGPropject.dir/src/main.cpp.o.d"
+  "/home/adi/CustomRenderer/OpenGL-Project/src/shaderClass.cpp" "CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.o" "gcc" "CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

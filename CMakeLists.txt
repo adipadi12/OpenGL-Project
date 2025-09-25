@@ -12,6 +12,7 @@ include_directories(
 )
 
 add_definitions(-DSHADER_DIR="${CMAKE_SOURCE_DIR}/src/Shaders/")
+add_definitions(-DTEXTURE_DIR="${CMAKE_BINARY_DIR}/Resources/")
 
 file(COPY ${CMAKE_SOURCE_DIR}/src/Shaders/ DESTINATION ${CMAKE_BINARY_DIR}/Shaders)
 
@@ -24,6 +25,7 @@ add_executable(MyOGPropject
     src/VBO.cpp
     src/shaderClass.cpp
     src/stb_image.cpp
+    src/Texture.cpp
 )
 
 target_link_libraries(MyOGPropject 

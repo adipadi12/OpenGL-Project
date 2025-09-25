@@ -7,22 +7,21 @@
 #include "VAO.h"
 #include "VBO.h"
 #include "EBO.h"
+#include "stb_image.h"
+#include "Texture.h"
 
 // can use normal floats but safer to use GLfloats
 GLfloat vertices[] = {
-    // COORDINATES       // COLORS
-    -0.5f, -0.5f, 0.0f,  0.8f, 0.3f, 0.02f,// 0 bottom left
-    0.5f, -0.5f, 0.0f,   0.8f, 0.3f, 0.02f,  // 1 bottom right
-    0.0f,  0.5f, 0.0f,   1.0f, 0.6f, 0.32f, // 2 top
-    -0.25f, 0.0f, 0.0f,  0.9f, 0.45f, 0.17f, // 3 inner left
-    0.25f, 0.0f, 0.0f,   0.9f, 0.45f, 0.17f, // 4 inner right
-    0.0f, -0.5f, 0.0f,   0.8f, 0.3f, 0.02f   // 5 inner bottom
+    // COORDINATES       // COLORS          // COORDINATES  
+    -0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,  0.0f, 0.0f, // lower left corner
+    -0.5f, 0.5f, 0.0f,   0.0f, 1.0f, 0.0f,  0.0f, 1.0f, // upper left corner
+    0.5f,  0.5f, 0.0f,   0.0f, 0.0f, 1.0f,  1.0f, 1.0f, // upper right corner
+    0.5f, -0.5f, 0.0f,  1.0f, 1.0f, 1.0f,   1.0f, 0.0f // lower left corner
 };
 
 GLuint indices[] = {
-    0, 3, 5, // lower left triangle
-    3, 2, 4, // upper triangle
-    5, 4, 1 // lower right triangle
+    0,2,1, // upper triangle
+    0,3,2, // lower triangle
 };
 
 const int SCREEN_WIDTH = 1200;
@@ -65,13 +64,18 @@ int main(){
     EBO EBO1(indices, sizeof(indices));
 
     // links the VBO to the VAO
-    VAO1.LinkAttrib(VBO1, 0, 3, GL_FLOAT, 6 * sizeof(float), (void*)0); //link VBO1 to layout 0 (position)
-    VAO1.LinkAttrib(VBO1, 1, 3, GL_FLOAT, 6 * sizeof(float), (void*)(3 * sizeof(float))); //link VBO1 to layout 1 (color)
+    VAO1.LinkAttrib(VBO1, 0, 3, GL_FLOAT, 8 * sizeof(float), (void*)0); //link VBO1 to layout 0 (position)
+    VAO1.LinkAttrib(VBO1, 1, 3, GL_FLOAT, 8 * sizeof(float), (void*)(3 * sizeof(float))); //link VBO1 to layout 1 (color)
+    VAO1.LinkAttrib(VBO1, 2, 2, GL_FLOAT, 8 * sizeof(float), (void*)(6 * sizeof(float))); //link VBO1 to layout 2 (texture coords)
     VAO1.Unbind();
     VBO1.Unbind();
     EBO1.Unbind();
 
     GLuint uniID = glGetUniformLocation(shaderProgram.ID, "scale");
+
+    // texture
+    Texture texture(TEXTURE_DIR "doakes2.jpeg", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGB, GL_UNSIGNED_BYTE); //RGB with jpeg and RGBA with png and jpg
+    texture.texUnit(shaderProgram, "tex0", 0);
 
     // main while loop
     while (!glfwWindowShouldClose(window)) //keep the window open until it is closed manually
@@ -83,10 +87,11 @@ int main(){
         shaderProgram.Activate(); //use the shader program object
 
         glUniform1f(uniID, (sin(glfwGetTime()) / 2.0f) + 0.5f); // send uniform data to the vertex shader
+        texture.Bind();
 
         VAO1.Bind(); //bind the VAO (the triangle)
 
-        glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_INT, 0); //draw the triangle using the 3 vertices in the VAO
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0); //draw the triangle using the 3 vertices in the VAO
 
         glfwSwapBuffers(window);  //ensures image is swapped each frame
 
@@ -99,6 +104,7 @@ int main(){
     VAO1.Delete();
     VBO1.Delete();
     EBO1.Delete();
+    texture.Delete();
     shaderProgram.Delete();
 
     // delete window before ending the program

@@ -188,4 +188,9 @@ CMakeFiles/MyOGPropject.dir/src/main.cpp.o: \
  /home/adi/CustomRenderer/OpenGL-Project/src/HeaderFiles/VAO.h \
  /home/adi/CustomRenderer/OpenGL-Project/src/HeaderFiles/VBO.h \
  /home/adi/CustomRenderer/OpenGL-Project/src/HeaderFiles/VBO.h \
- /home/adi/CustomRenderer/OpenGL-Project/src/HeaderFiles/EBO.h
+ /home/adi/CustomRenderer/OpenGL-Project/src/HeaderFiles/EBO.h \
+ /home/adi/CustomRenderer/OpenGL-Project/src/HeaderFiles/stb_image.h \
+ /usr/include/c++/13/stdlib.h \
+ /home/adi/CustomRenderer/OpenGL-Project/src/HeaderFiles/Texture.h \
+ /home/adi/CustomRenderer/OpenGL-Project/src/HeaderFiles/stb_image.h \
+ /home/adi/CustomRenderer/OpenGL-Project/src/HeaderFiles/shaderClass.h

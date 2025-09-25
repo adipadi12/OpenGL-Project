@@ -8,8 +8,9 @@ class VAO{
     public:
         GLuint ID;
         VAO();
-
-        void LinkVBO(VBO& VBO, GLuint layout);
+        //STRIDE IS distance in bytes between beginning of consecutive vertex attributes 
+        // OFFSET is offset of the first component of the first vertex attribute in the array in bytes
+        void LinkAttrib(VBO& VBO, GLuint layout, GLuint numComponents, GLenum type, GLsizeiptr stride, void* offset);
         void Bind();
         void Unbind();
         void Delete();

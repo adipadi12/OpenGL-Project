@@ -17,6 +17,9 @@ public:
     Shader(const char* vertexFile, const char* fragmentFile);
     void Activate();
     void Delete();
+
+private:
+    void checkCompileErrors(unsigned int shader, const char* type);
 };
 
 #endif

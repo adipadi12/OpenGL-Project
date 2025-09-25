@@ -23,6 +23,7 @@ add_executable(MyOGPropject
     src/VAO.cpp
     src/VBO.cpp
     src/shaderClass.cpp
+    src/stb_image.cpp
 )
 
 target_link_libraries(MyOGPropject 

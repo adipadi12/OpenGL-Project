@@ -34,5 +34,11 @@
   "command": "/usr/bin/g++ -DSHADER_DIR=\\\"/home/adi/CustomRenderer/OpenGL-Project/src/Shaders/\\\" -I/home/adi/CustomRenderer/OpenGL-Project/src/HeaderFiles -I/home/adi/CustomRenderer/OpenGL-Project/src/Shaders -I/home/adi/CustomRenderer/OpenGL-Project/src -g -o CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.o -c /home/adi/CustomRenderer/OpenGL-Project/src/shaderClass.cpp",
   "file": "/home/adi/CustomRenderer/OpenGL-Project/src/shaderClass.cpp",
   "output": "CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.o"
+},
+{
+  "directory": "/home/adi/CustomRenderer/OpenGL-Project/build",
+  "command": "/usr/bin/g++ -DSHADER_DIR=\\\"/home/adi/CustomRenderer/OpenGL-Project/src/Shaders/\\\" -I/home/adi/CustomRenderer/OpenGL-Project/src/HeaderFiles -I/home/adi/CustomRenderer/OpenGL-Project/src/Shaders -I/home/adi/CustomRenderer/OpenGL-Project/src -g -o CMakeFiles/MyOGPropject.dir/src/stb_image.cpp.o -c /home/adi/CustomRenderer/OpenGL-Project/src/stb_image.cpp",
+  "file": "/home/adi/CustomRenderer/OpenGL-Project/src/stb_image.cpp",
+  "output": "CMakeFiles/MyOGPropject.dir/src/stb_image.cpp.o"
 }
 ]

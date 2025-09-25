@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/MyOGPropject.dir/src/main.cpp.o.d"
   "CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.o"
   "CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.o.d"
+  "CMakeFiles/MyOGPropject.dir/src/stb_image.cpp.o"
+  "CMakeFiles/MyOGPropject.dir/src/stb_image.cpp.o.d"
   "MyOGPropject"
   "MyOGPropject.pdb"
 )

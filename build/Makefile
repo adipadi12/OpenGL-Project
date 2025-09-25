@@ -273,6 +273,30 @@ src/shaderClass.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyOGPropject.dir/build.make CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.s
 .PHONY : src/shaderClass.cpp.s
 
+src/stb_image.o: src/stb_image.cpp.o
+.PHONY : src/stb_image.o
+
+# target to build an object file
+src/stb_image.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyOGPropject.dir/build.make CMakeFiles/MyOGPropject.dir/src/stb_image.cpp.o
+.PHONY : src/stb_image.cpp.o
+
+src/stb_image.i: src/stb_image.cpp.i
+.PHONY : src/stb_image.i
+
+# target to preprocess a source file
+src/stb_image.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyOGPropject.dir/build.make CMakeFiles/MyOGPropject.dir/src/stb_image.cpp.i
+.PHONY : src/stb_image.cpp.i
+
+src/stb_image.s: src/stb_image.cpp.s
+.PHONY : src/stb_image.s
+
+# target to generate assembly for a file
+src/stb_image.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyOGPropject.dir/build.make CMakeFiles/MyOGPropject.dir/src/stb_image.cpp.s
+.PHONY : src/stb_image.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -300,6 +324,9 @@ help:
 	@echo "... src/shaderClass.o"
 	@echo "... src/shaderClass.i"
 	@echo "... src/shaderClass.s"
+	@echo "... src/stb_image.o"
+	@echo "... src/stb_image.i"
+	@echo "... src/stb_image.s"
 .PHONY : help
 
 

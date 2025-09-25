@@ -10,12 +10,13 @@
 
 // can use normal floats but safer to use GLfloats
 GLfloat vertices[] = {
-    -0.5f, -0.5f, 0.0f, // 0 bottom left
-    0.5f, -0.5f, 0.0f, // 1 bottom right
-    0.0f,  0.5f, 0.0f, // 2 top
-    -0.25f, 0.0f, 0.0f, // 3 inner left
-    0.25f, 0.0f, 0.0f, // 4 inner right
-    0.0f, -0.5f, 0.0f // 5 inner bottom
+    // COORDINATES       // COLORS
+    -0.5f, -0.5f, 0.0f,  0.8f, 0.3f, 0.02f,// 0 bottom left
+    0.5f, -0.5f, 0.0f,   0.8f, 0.3f, 0.02f,  // 1 bottom right
+    0.0f,  0.5f, 0.0f,   1.0f, 0.6f, 0.32f, // 2 top
+    -0.25f, 0.0f, 0.0f,  0.9f, 0.45f, 0.17f, // 3 inner left
+    0.25f, 0.0f, 0.0f,   0.9f, 0.45f, 0.17f, // 4 inner right
+    0.0f, -0.5f, 0.0f,   0.8f, 0.3f, 0.02f   // 5 inner bottom
 };
 
 GLuint indices[] = {
@@ -24,8 +25,8 @@ GLuint indices[] = {
     5, 4, 1 // lower right triangle
 };
 
-const int SCREEN_WIDTH = 1000;
-const int SCREEN_HEIGHT = 800;
+const int SCREEN_WIDTH = 1200;
+const int SCREEN_HEIGHT = 1000;
 
 int main(){
     glfwInit(); //initialize GLFW
@@ -64,10 +65,13 @@ int main(){
     EBO EBO1(indices, sizeof(indices));
 
     // links the VBO to the VAO
-    VAO1.LinkVBO(VBO1, 0);
+    VAO1.LinkAttrib(VBO1, 0, 3, GL_FLOAT, 6 * sizeof(float), (void*)0); //link VBO1 to layout 0 (position)
+    VAO1.LinkAttrib(VBO1, 1, 3, GL_FLOAT, 6 * sizeof(float), (void*)(3 * sizeof(float))); //link VBO1 to layout 1 (color)
     VAO1.Unbind();
     VBO1.Unbind();
     EBO1.Unbind();
+
+    GLuint uniID = glGetUniformLocation(shaderProgram.ID, "scale");
 
     // main while loop
     while (!glfwWindowShouldClose(window)) //keep the window open until it is closed manually
@@ -77,6 +81,8 @@ int main(){
         glClear(GL_COLOR_BUFFER_BIT);
 
         shaderProgram.Activate(); //use the shader program object
+
+        glUniform1f(uniID, (sin(glfwGetTime()) / 2.0f) + 0.5f); // send uniform data to the vertex shader
 
         VAO1.Bind(); //bind the VAO (the triangle)
 

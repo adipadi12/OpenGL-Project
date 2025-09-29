@@ -46,5 +46,11 @@
   "command": "/usr/bin/g++ -DSHADER_DIR=\\\"/home/adi/CustomRenderer/OpenGL-Project/src/Shaders/\\\" -DTEXTURE_DIR=\\\"/home/adi/CustomRenderer/OpenGL-Project/build/Resources/\\\" -I/home/adi/CustomRenderer/OpenGL-Project/src/HeaderFiles -I/home/adi/CustomRenderer/OpenGL-Project/src/Shaders -I/home/adi/CustomRenderer/OpenGL-Project/src -g -o CMakeFiles/MyOGPropject.dir/src/Texture.cpp.o -c /home/adi/CustomRenderer/OpenGL-Project/src/Texture.cpp",
   "file": "/home/adi/CustomRenderer/OpenGL-Project/src/Texture.cpp",
   "output": "CMakeFiles/MyOGPropject.dir/src/Texture.cpp.o"
+},
+{
+  "directory": "/home/adi/CustomRenderer/OpenGL-Project/build",
+  "command": "/usr/bin/g++ -DSHADER_DIR=\\\"/home/adi/CustomRenderer/OpenGL-Project/src/Shaders/\\\" -DTEXTURE_DIR=\\\"/home/adi/CustomRenderer/OpenGL-Project/build/Resources/\\\" -I/home/adi/CustomRenderer/OpenGL-Project/src/HeaderFiles -I/home/adi/CustomRenderer/OpenGL-Project/src/Shaders -I/home/adi/CustomRenderer/OpenGL-Project/src -g -o CMakeFiles/MyOGPropject.dir/src/Camera.cpp.o -c /home/adi/CustomRenderer/OpenGL-Project/src/Camera.cpp",
+  "file": "/home/adi/CustomRenderer/OpenGL-Project/src/Camera.cpp",
+  "output": "CMakeFiles/MyOGPropject.dir/src/Camera.cpp.o"
 }
 ]

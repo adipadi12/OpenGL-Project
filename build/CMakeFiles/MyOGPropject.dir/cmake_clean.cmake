@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/MyOGPropject.dir/src/Camera.cpp.o"
+  "CMakeFiles/MyOGPropject.dir/src/Camera.cpp.o.d"
   "CMakeFiles/MyOGPropject.dir/src/EBO.cpp.o"
   "CMakeFiles/MyOGPropject.dir/src/EBO.cpp.o.d"
   "CMakeFiles/MyOGPropject.dir/src/Texture.cpp.o"

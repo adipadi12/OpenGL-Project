@@ -26,6 +26,7 @@ add_executable(MyOGPropject
     src/shaderClass.cpp
     src/stb_image.cpp
     src/Texture.cpp
+    src/Camera.cpp
 )
 
 target_link_libraries(MyOGPropject 

@@ -129,6 +129,30 @@ MyOGPropject/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyOGPropject.dir/build.make CMakeFiles/MyOGPropject.dir/build
 .PHONY : MyOGPropject/fast
 
+src/Camera.o: src/Camera.cpp.o
+.PHONY : src/Camera.o
+
+# target to build an object file
+src/Camera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyOGPropject.dir/build.make CMakeFiles/MyOGPropject.dir/src/Camera.cpp.o
+.PHONY : src/Camera.cpp.o
+
+src/Camera.i: src/Camera.cpp.i
+.PHONY : src/Camera.i
+
+# target to preprocess a source file
+src/Camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyOGPropject.dir/build.make CMakeFiles/MyOGPropject.dir/src/Camera.cpp.i
+.PHONY : src/Camera.cpp.i
+
+src/Camera.s: src/Camera.cpp.s
+.PHONY : src/Camera.s
+
+# target to generate assembly for a file
+src/Camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyOGPropject.dir/build.make CMakeFiles/MyOGPropject.dir/src/Camera.cpp.s
+.PHONY : src/Camera.cpp.s
+
 src/EBO.o: src/EBO.cpp.o
 .PHONY : src/EBO.o
 
@@ -330,6 +354,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MyOGPropject"
+	@echo "... src/Camera.o"
+	@echo "... src/Camera.i"
+	@echo "... src/Camera.s"
 	@echo "... src/EBO.o"
 	@echo "... src/EBO.i"
 	@echo "... src/EBO.s"

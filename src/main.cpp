@@ -80,14 +80,13 @@ int main(){
     VBO1.Unbind();
     EBO1.Unbind();
 
-    GLuint uniID = glGetUniformLocation(shaderProgram.ID, "scale");
-
     // texture
     Texture texture(TEXTURE_DIR "doakes2.jpeg", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGB, GL_UNSIGNED_BYTE); //RGB with jpeg and RGBA with png and jpg
     texture.texUnit(shaderProgram, "tex0", 0);
 
     glEnable(GL_DEPTH_TEST); //enable depth testing for 3D
 
+    Camera camera(SCREEN_WIDTH, SCREEN_HEIGHT, glm::vec3(0.0f, 0.0f, 2.0f));
     // main while loop
     while (!glfwWindowShouldClose(window)) //keep the window open until it is closed manually
     {
@@ -97,24 +96,9 @@ int main(){
 
         shaderProgram.Activate(); //use the shader program object
 
-        glm::mat4 model = glm::mat4(1.0f); // initialize matrix to identity matrix
-        glm::mat4 view = glm::mat4(1.0f);
-        glm::mat4 proj = glm::mat4(1.0f);
+        camera.Inputs(window);
+        camera.Matrix(45.0f, 0.1f, 100.0f, shaderProgram, "camMatrix"); //send projection and view matrix to shader each frame
 
-        model = glm::rotate(model, (float)glfwGetTime(), glm::vec3(0.0f, 1.0f, 0.0f)); //rotate the model over time
-        view = glm::translate(view, glm::vec3(0.0f, -0.25f, -2.0f)); //move the scene backwards (so we can see it)
-        proj = glm::perspective(glm::radians(45.0f), (float)SCREEN_WIDTH / (float)SCREEN_HEIGHT, 0.1f, 100.0f); //perspective projection
-
-        int modelLoc = glGetUniformLocation(shaderProgram.ID, "model");
-        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-
-        int viewLoc = glGetUniformLocation(shaderProgram.ID, "view");
-        glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-
-        int projLoc = glGetUniformLocation(shaderProgram.ID, "proj");
-        glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(proj));
-
-        glUniform1f(uniID, (sin(glfwGetTime()) / 2.0f) + 0.5f); // send uniform data to the vertex shader
         texture.Bind();
 
         VAO1.Bind(); //bind the VAO (the triangle)

@@ -10,13 +10,11 @@ out vec2 texCoord;
 
 uniform float scale; // only declare uniforms when gonna use them else error goes BOOM
 
-uniform mat4 model;
-uniform mat4 view;
-uniform mat4 proj; 
+uniform mat4 camMatrix; // camera matrix (view matrix)
 
 void main()
 {
-   gl_Position = proj * view * model * vec4(aPos, 1.0); // w component is 1 for position vectors
+   gl_Position = camMatrix * vec4(aPos, 1.0); // w component is 1 for position vectors
    color = aColor;
    texCoord = aTex;
 }

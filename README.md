@@ -12,3 +12,9 @@
 
 
 ![doakes](https://github.com/user-attachments/assets/33cbb1ea-e2a6-4d85-95db-06dbb43b43ef)
+
+## Renderer v0.3 with specular lighting and depth buffer for camera
+![2025-09-30 04-15-12](https://github.com/user-attachments/assets/da408d05-d59c-467e-b339-11703f8892b4)
+
+
+![2025-09-30 06-26-40](https://github.com/user-attachments/assets/c6835c09-d3fd-437c-b353-79809d8a4632)

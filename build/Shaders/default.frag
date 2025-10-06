@@ -12,6 +12,7 @@ uniform sampler2D tex0;
 
 uniform vec4 lightColor;
 uniform vec3 lightPos;
+uniform vec3 camPos;
 
 void main()
 {
@@ -19,7 +20,13 @@ void main()
 
    vec3 normal = normalize(Normal);
    vec3 lightDirection = normalize(lightPos - currentPos);
-
    float diffuse = max(dot(normal, lightDirection), 0.0f);
-   FragColor = texture(tex0, texCoord) * lightColor * (diffuse + ambient);
+
+   float specularLight = 0.50f;
+   vec3 viewDirection = normalize(camPos - currentPos);
+   vec3 reflectDirection = reflect(-lightDirection, normal);
+   float specAmt = pow(max(dot(viewDirection, reflectDirection), 0.0), 8);
+   float specular = specAmt * specularLight;
+
+   FragColor = texture(tex0, texCoord) * lightColor * (diffuse + ambient + specular);
 }

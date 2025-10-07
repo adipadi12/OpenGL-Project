@@ -18,3 +18,6 @@
 
 
 ![2025-09-30 06-26-40](https://github.com/user-attachments/assets/c6835c09-d3fd-437c-b353-79809d8a4632)
+
+Specular lighting
+![speclight](https://github.com/user-attachments/assets/499cec69-bd69-4b0d-8088-e8e9b934cd5c)

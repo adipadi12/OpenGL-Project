@@ -63,38 +63,40 @@ void Camera::Inputs(GLFWwindow* window)
 
     if(glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS)
     {
-        glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL); //show the cursor
+        glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED); // lock + hide
 
-        if(firstClick) //this bool variable is to prevent the camera from jumping around when first clicking
+        if(firstClick)
         {
-            glfwSetCursorPos(window, (width / 2), (height / 2)); //sets cursor to the middle of the screen
+            glfwSetCursorPos(window, (width / 2), (height / 2));
             firstClick = false;
         }
 
-        // Handles mouse inputs
-        double mouseX;
-        double mouseY;
-        // Fetches the current position of the cursor
+        double mouseX, mouseY;
         glfwGetCursorPos(window, &mouseX, &mouseY);
 
-        float rotX = sensitivity * (float)(mouseY - (height / 2)) / height; //calculates the rotation around the x-axis
-        float rotY = sensitivity * (float)(mouseX - (width / 2)) / height; //calculates the rotation around the y-axis
+        float rotX = sensitivity * (float)(mouseY - (height / 2)) / height;
+        float rotY = sensitivity * (float)(mouseX - (width / 2)) / height;
 
-        glm::vec3 newOrientation = glm::rotate(Orientation, glm::radians(-rotX), glm::normalize(glm::normalize(glm::cross(Orientation, Up)))); //rotates the Orientation vector around the y-axis
+        glm::vec3 newOrientation = glm::rotate(
+            Orientation,
+            glm::radians(-rotX),
+            glm::normalize(glm::cross(Orientation, Up))
+        );
 
-        if(!((glm::angle(newOrientation, Up) <= glm::radians(5.0f)) || (glm::angle(newOrientation, -Up) <= glm::radians(5.0f)))) //prevents the camera from flipping
+        if(!((glm::angle(newOrientation, Up) <= glm::radians(5.0f)) ||
+            (glm::angle(newOrientation, -Up) <= glm::radians(5.0f))))
         {
             Orientation = newOrientation;
         }
 
-        Orientation = glm::rotate(Orientation, glm::radians(-rotY), Up); //rotates the Orientation vector around the x-axis
+        Orientation = glm::rotate(Orientation, glm::radians(-rotY), Up);
 
-        glfwSetCursorPos(window, (width / 2), (height / 2)); //resets the position of the cursor to the middle of the screen
+        glfwSetCursorPos(window, (width / 2), (height / 2));
     }
-
     else if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_RELEASE)
     {
-        glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL); //hide the cursor
+        glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL); // show + unlock
         firstClick = true;
     }
+
 }

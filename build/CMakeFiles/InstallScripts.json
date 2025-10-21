@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/adi/CustomRenderer/OpenGL-Project/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

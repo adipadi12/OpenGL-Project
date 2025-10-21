@@ -12,16 +12,12 @@
 		[
 			"add_executable",
 			"target_link_libraries",
-			"set_property",
-			"find_package",
-			"set_target_properties",
 			"add_definitions",
 			"include_directories"
 		],
 		"files" : 
 		[
-			"CMakeLists.txt",
-			"/usr/share/cmake-3.28/Modules/FindOpenGL.cmake"
+			"CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -41,41 +37,19 @@
 				"parent" : 0
 			},
 			{
-				"command" : 3,
-				"file" : 0,
-				"line" : 5,
-				"parent" : 0
-			},
-			{
-				"file" : 1,
-				"parent" : 3
-			},
-			{
 				"command" : 2,
-				"file" : 1,
-				"line" : 673,
-				"parent" : 4
-			},
-			{
-				"command" : 4,
-				"file" : 1,
-				"line" : 671,
-				"parent" : 4
-			},
-			{
-				"command" : 5,
 				"file" : 0,
 				"line" : 14,
 				"parent" : 0
 			},
 			{
-				"command" : 5,
+				"command" : 2,
 				"file" : 0,
 				"line" : 15,
 				"parent" : 0
 			},
 			{
-				"command" : 6,
+				"command" : 3,
 				"file" : 0,
 				"line" : 8,
 				"parent" : 0
@@ -85,35 +59,29 @@
 	"compileGroups" : 
 	[
 		{
-			"compileCommandFragments" : 
-			[
-				{
-					"fragment" : "-g"
-				}
-			],
 			"defines" : 
 			[
 				{
-					"backtrace" : 7,
+					"backtrace" : 3,
 					"define" : "SHADER_DIR=\"/home/adi/CustomRenderer/OpenGL-Project/src/Shaders/\""
 				},
 				{
-					"backtrace" : 8,
-					"define" : "TEXTURE_DIR=\"/home/adi/CustomRenderer/OpenGL-Project/build/Resources/\""
+					"backtrace" : 4,
+					"define" : "TEXTURE_DIR=\"/home/adi/CustomRenderer/OpenGL-Project/src/Resources/\""
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 9,
+					"backtrace" : 5,
 					"path" : "/home/adi/CustomRenderer/OpenGL-Project/src/HeaderFiles"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 5,
 					"path" : "/home/adi/CustomRenderer/OpenGL-Project/src/Shaders"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 5,
 					"path" : "/home/adi/CustomRenderer/OpenGL-Project/src"
 				}
 			],
@@ -131,35 +99,29 @@
 			]
 		},
 		{
-			"compileCommandFragments" : 
-			[
-				{
-					"fragment" : "-g"
-				}
-			],
 			"defines" : 
 			[
 				{
-					"backtrace" : 7,
+					"backtrace" : 3,
 					"define" : "SHADER_DIR=\"/home/adi/CustomRenderer/OpenGL-Project/src/Shaders/\""
 				},
 				{
-					"backtrace" : 8,
-					"define" : "TEXTURE_DIR=\"/home/adi/CustomRenderer/OpenGL-Project/build/Resources/\""
+					"backtrace" : 4,
+					"define" : "TEXTURE_DIR=\"/home/adi/CustomRenderer/OpenGL-Project/src/Resources/\""
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 9,
+					"backtrace" : 5,
 					"path" : "/home/adi/CustomRenderer/OpenGL-Project/src/HeaderFiles"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 5,
 					"path" : "/home/adi/CustomRenderer/OpenGL-Project/src/Shaders"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 5,
 					"path" : "/home/adi/CustomRenderer/OpenGL-Project/src"
 				}
 			],
@@ -176,26 +138,23 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
-				"role" : "flags"
-			},
-			{
-				"fragment" : "",
-				"role" : "flags"
-			},
-			{
 				"backtrace" : 2,
 				"fragment" : "-lglfw",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 5,
-				"fragment" : "/usr/lib/x86_64-linux-gnu/libGLX.so",
+				"backtrace" : 2,
+				"fragment" : "/usr/lib/libOpenGL.so",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 6,
-				"fragment" : "/usr/lib/x86_64-linux-gnu/libOpenGL.so",
+				"backtrace" : 2,
+				"fragment" : "/usr/lib/libGLX.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "/usr/lib/libGLU.so",
 				"role" : "libraries"
 			}
 		],

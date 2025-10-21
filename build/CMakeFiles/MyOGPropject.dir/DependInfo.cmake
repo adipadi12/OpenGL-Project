@@ -17,6 +17,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/adi/CustomRenderer/OpenGL-Project/src/main.cpp" "CMakeFiles/MyOGPropject.dir/src/main.cpp.o" "gcc" "CMakeFiles/MyOGPropject.dir/src/main.cpp.o.d"
   "/home/adi/CustomRenderer/OpenGL-Project/src/shaderClass.cpp" "CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.o" "gcc" "CMakeFiles/MyOGPropject.dir/src/shaderClass.cpp.o.d"
   "/home/adi/CustomRenderer/OpenGL-Project/src/stb_image.cpp" "CMakeFiles/MyOGPropject.dir/src/stb_image.cpp.o" "gcc" "CMakeFiles/MyOGPropject.dir/src/stb_image.cpp.o.d"
+  "" "MyOGPropject" "gcc" "CMakeFiles/MyOGPropject.dir/link.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

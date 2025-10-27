@@ -7,11 +7,11 @@ C_DEFINES = -DSHADER_DIR=\"/home/adi/CustomRenderer/OpenGL-Project/src/Shaders/\
 
 C_INCLUDES = -I/home/adi/CustomRenderer/OpenGL-Project/src/HeaderFiles -I/home/adi/CustomRenderer/OpenGL-Project/src/Shaders -I/home/adi/CustomRenderer/OpenGL-Project/src
 
-C_FLAGS = 
+C_FLAGS = -g
 
 CXX_DEFINES = -DSHADER_DIR=\"/home/adi/CustomRenderer/OpenGL-Project/src/Shaders/\" -DTEXTURE_DIR=\"/home/adi/CustomRenderer/OpenGL-Project/src/Resources/\"
 
 CXX_INCLUDES = -I/home/adi/CustomRenderer/OpenGL-Project/src/HeaderFiles -I/home/adi/CustomRenderer/OpenGL-Project/src/Shaders -I/home/adi/CustomRenderer/OpenGL-Project/src
 
-CXX_FLAGS = 
+CXX_FLAGS = -g
 

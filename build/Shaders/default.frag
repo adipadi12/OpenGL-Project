@@ -15,12 +15,18 @@ uniform vec4 lightColor;
 uniform vec3 lightPos;
 uniform vec3 camPos;
 
-void main()
-{
+vec4 pointLight(){
+   vec3 lightVec = lightPos - currentPos;
+   float dist = length(lightVec);
+   float a = 0.05;
+   float b = 0.01;
+   float inten = 1.0f / (a * dist * dist + b * dist + 1.0f);
+
+   // ambient lighting
    float ambient = 0.20f;
 
    vec3 normal = normalize(Normal);
-   vec3 lightDirection = normalize(lightPos - currentPos);
+   vec3 lightDirection = normalize(lightVec);
    float diffuse = max(dot(normal, lightDirection), 0.0f);
 
    float specularLight = 0.50f;
@@ -29,5 +35,11 @@ void main()
    float specAmt = pow(max(dot(viewDirection, reflectDirection), 0.0), 16);
    float specular = specAmt * specularLight;
 
-   FragColor = texture(tex0, texCoord) * lightColor * (diffuse + ambient) + texture(tex1, texCoord).r * specular;
+   return (texture(tex0, texCoord) *  (diffuse * inten + ambient) + texture(tex1, texCoord).r * specular * inten) * lightColor;
+}
+void main()
+{
+   
+
+   FragColor = pointLight();
 }

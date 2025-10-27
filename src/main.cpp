@@ -120,7 +120,7 @@ int main(){
 
     glm::vec4 lightColor = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
 
-    glm::vec3 lightPos = glm::vec3(0.5f, 0.5f, 0.5f);
+    glm::vec3 lightPos = glm::vec3(0.0f, 0.5f, 0.5f);
     glm::mat4 lightModel = glm::mat4(1.0f);
     lightModel = glm::translate(lightModel, lightPos);
 
@@ -134,7 +134,7 @@ int main(){
     shaderProgram.Activate();
     glUniformMatrix4fv(glGetUniformLocation(shaderProgram.ID, "model"), 1, GL_FALSE, glm::value_ptr(pyramidModel));
     glUniform4f(glGetUniformLocation(shaderProgram.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z, lightColor.w);
-    glUniform3f(glGetUniformLocation(shaderProgram.ID, "lightPos"), lightPos.x, lightPos.y, lightColor.z);
+    glUniform3f(glGetUniformLocation(shaderProgram.ID, "lightPos"), lightPos.x, lightPos.y, lightPos.z);
 
     // texture
     Texture texture(TEXTURE_DIR "planks.png", GL_TEXTURE_2D, 0, GL_RGBA, GL_UNSIGNED_BYTE); //RGB with jpeg and RGBA with png and jpg
@@ -160,6 +160,9 @@ int main(){
         camera.updateMatrix(45.0f, 0.1f, 100.0f); //send projection and view matrix to shader each frame
 
         shaderProgram.Activate();
+
+        glUniform3f(glGetUniformLocation(shaderProgram.ID, "spotDir"), 0.0f, -1.0f, 0.0f);
+
         glUniform3f(glGetUniformLocation(shaderProgram.ID, "camPos"), camera.Position.x, camera.Position.y, camera.Position.z);
         camera.Matrix(shaderProgram, "camMatrix");
 

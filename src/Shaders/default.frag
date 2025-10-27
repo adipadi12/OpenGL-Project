@@ -54,7 +54,33 @@ vec4 directionLight(){
 
    return (texture(tex0, texCoord) *  (diffuse + ambient) + texture(tex1, texCoord).r * specular) * lightColor;
 }
+
+uniform vec3 spotDir;
+
+vec4 spotLight(){
+   float outerCone = 0.9f;
+   float innerCone = 0.95f; // cosine angles between the 2 make the shader better
+
+   // ambient lighting
+   float ambient = 0.20f;
+
+   vec3 normal = normalize(Normal);
+   vec3 lightDirection = normalize(lightPos - currentPos);
+   float diffuse = max(dot(normal, lightDirection), 0.0f);
+
+   float specularLight = 0.50f;
+   vec3 viewDirection = normalize(camPos - currentPos);
+   vec3 reflectDirection = reflect(-lightDirection, normal);
+   float specAmt = pow(max(dot(viewDirection, reflectDirection), 0.0), 16);
+   float specular = specAmt * specularLight;
+
+   float angle = dot(normalize(spotDir), -lightDirection);
+   float inten = clamp((angle - outerCone) / (innerCone - outerCone), 0.0f, 1.0f); //formula for intensity
+
+   return (texture(tex0, texCoord) *  (diffuse * inten + ambient) + texture(tex1, texCoord).r * specular * inten) * lightColor;
+}
+
 void main()
 {
-   FragColor = directionLight();
+   FragColor = spotLight();
 }

@@ -37,9 +37,24 @@ vec4 pointLight(){
 
    return (texture(tex0, texCoord) *  (diffuse * inten + ambient) + texture(tex1, texCoord).r * specular * inten) * lightColor;
 }
+
+vec4 directionLight(){
+      // ambient lighting
+   float ambient = 0.20f;
+
+   vec3 normal = normalize(Normal);
+   vec3 lightDirection = normalize(vec3(1.0f,1.0f,0.0f));
+   float diffuse = max(dot(normal, lightDirection), 0.0f);
+
+   float specularLight = 0.50f;
+   vec3 viewDirection = normalize(camPos - currentPos);
+   vec3 reflectDirection = reflect(-lightDirection, normal);
+   float specAmt = pow(max(dot(viewDirection, reflectDirection), 0.0), 16);
+   float specular = specAmt * specularLight;
+
+   return (texture(tex0, texCoord) *  (diffuse + ambient) + texture(tex1, texCoord).r * specular) * lightColor;
+}
 void main()
 {
-   
-
-   FragColor = pointLight();
+   FragColor = directionLight();
 }

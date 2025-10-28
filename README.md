@@ -21,3 +21,6 @@
 
 Specular lighting
 ![speclight](https://github.com/user-attachments/assets/499cec69-bd69-4b0d-8088-e8e9b934cd5c)
+Point Light: ![pointlight](https://github.com/user-attachments/assets/e7a71b83-7294-408e-8b82-0cee61a13188)
+Directional Light: ![directionallight](https://github.com/user-attachments/assets/13943ddd-beda-4407-ad73-e5723edc722f)
+Spot Light: ![spotlight](https://github.com/user-attachments/assets/6506fc71-8c48-4f82-9bdd-dcd62c076ecd)

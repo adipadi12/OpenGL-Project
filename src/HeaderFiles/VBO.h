@@ -2,11 +2,21 @@
 #define VBO_CLASS_H
 
 #include "glad.h"
+#include <glm/glm.hpp>
+#include <vector>
+
+struct Vertex
+{
+    glm::vec3 position;
+    glm::vec3 normal;
+    glm::vec3 color;
+    glm::vec2 texUV;
+};
 
 class VBO{
     public:
         GLuint ID;
-        VBO(GLfloat* vertices, GLsizeiptr size); //GLsizeiptr is a signed integer type used for sizes in OPenGL
+        VBO(std::vector<Vertex>& vertices); //GLsizeiptr is a signed integer type used for sizes in OPenGL
         void Bind();
         void Unbind();
         void Delete();

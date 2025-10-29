@@ -2,14 +2,17 @@
 #version 330 core
 out vec4 FragColor;
 
-in vec3 color; // inputs and outputs need to have same name
-
-in vec2 texCoord;
-in vec3 Normal;
+// imports current position from vertex shader
 in vec3 currentPos;
+// imports normal from vs
+in vec3 Normal;
+// imports color from vs
+in vec3 color; // inputs and outputs need to have same name
+// imports texture coordinates from vs
+in vec2 texCoord;
 
-uniform sampler2D tex0;
-uniform sampler2D tex1;
+uniform sampler2D diffuse0;
+uniform sampler2D specular0;
 
 uniform vec4 lightColor;
 uniform vec3 lightPos;
@@ -35,7 +38,7 @@ vec4 pointLight(){
    float specAmt = pow(max(dot(viewDirection, reflectDirection), 0.0), 16);
    float specular = specAmt * specularLight;
 
-   return (texture(tex0, texCoord) *  (diffuse * inten + ambient) + texture(tex1, texCoord).r * specular * inten) * lightColor;
+   return (texture(diffuse0, texCoord) *  (diffuse * inten + ambient) + texture(specular0, texCoord).r * specular * inten) * lightColor;
 }
 
 vec4 directionLight(){
@@ -52,7 +55,7 @@ vec4 directionLight(){
    float specAmt = pow(max(dot(viewDirection, reflectDirection), 0.0), 16);
    float specular = specAmt * specularLight;
 
-   return (texture(tex0, texCoord) *  (diffuse + ambient) + texture(tex1, texCoord).r * specular) * lightColor;
+   return (texture(diffuse0, texCoord) *  (diffuse + ambient) + texture(specular0, texCoord).r * specular) * lightColor;
 }
 
 uniform vec3 spotDir;
@@ -77,10 +80,10 @@ vec4 spotLight(){
    float angle = dot(normalize(spotDir), -lightDirection);
    float inten = clamp((angle - outerCone) / (innerCone - outerCone), 0.0f, 1.0f); //formula for intensity
 
-   return (texture(tex0, texCoord) *  (diffuse * inten + ambient) + texture(tex1, texCoord).r * specular * inten) * lightColor;
+   return (texture(diffuse0, texCoord) *  (diffuse * inten + ambient) + texture(specular0, texCoord).r * specular * inten) * lightColor;
 }
 
 void main()
 {
-   FragColor = spotLight();
+   FragColor = pointLight();
 }
